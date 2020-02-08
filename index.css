@@ -4,26 +4,33 @@
   box-sizing: border-box;
 }
 
-
-
 body {
   background-color:#FFFF;
   font-family: 'Helvetica Neue Light', sans-serif;
+  font-size: 20px;
   
 }
 
 .background {
   position: absolute;
-  width: 400px;
-  top: 35%; /* posiciona na metade da tela */
+  width: 300px;
+  top: 45%; /* posiciona na metade da tela */
   margin-top: -25px; /* e retrocede metade da altura */
   left: 45%; /* posiciona na metade da tela */
   margin-left: -100px;
 }
 
+.nav {
+  position: absolute;
+  top: 15%; /* posiciona na metade da tela */
+  margin-top: -25px; /* e retrocede metade da altura */
+  left: 20%; /* posiciona na metade da tela */
+  margin-left: -100px;
+}
+
 .profilepicture{
   position: absolute;
-  top: 40%; /* posiciona na metade da tela */
+  top: 10%; /* posiciona na metade da tela */
   margin-top: -25px; /* e retrocede metade da altura */
   left: 10%; /* posiciona na metade da tela */
   margin-left: -100px;
@@ -34,15 +41,18 @@ body {
 }
 
 .footer {
-  margin:20px;
+  margin:0px;
+  padding: 20px;
+  background-color: #000000;
+  width: 100%;
   font-size: 20px;
-  color: rgba(0, 0, 0, 0.8);
+  color: rgba(255, 255, 255, 0.8);
   display: inline-block;
   cursor: pointer;
   pointer-events: none;
   position: absolute;
-  bottom: 20px;
-  left: 20px;
+  bottom: 0px;
+
 }
 .footer:hover {
   pointer-events: all;
@@ -64,7 +74,7 @@ body {
 .spacer:before {
   content: "";
   position: absolute;
-  border-bottom: 1px solid #000000;
+  border-bottom: 1px solid #FFF;
   height: 1px;
   width: 0%;
   transition: width 0.25s ease;
