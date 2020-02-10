@@ -13,11 +13,33 @@ body {
 }
 
 .background {
-  position: absolute;
+  position: relative;
   background-repeat: repeat-x;
   background-attachment: fixed;
   width: 100%;        
   top: 0%; 
+  margin-top: -25px; 
+}
+
+.background2{
+  position: relative;
+  width: 30%;        
+  top: 0%; 
+  margin-top: -25px; 
+}
+
+.background3 {
+  position: relative;
+  width: 100%;        
+  top: 0%; 
+  margin-top: -25px; 
+}
+
+.tree {
+  position: absolute;
+  width: 20%;        
+  top: 340%; 
+  float: center;
   margin-top: -25px; 
 }
 
@@ -36,8 +58,8 @@ body {
   left: 10%; /* posiciona na metade da tela */
   margin-left: -100px;
   
-  width: 150px;
-  height: 150px;
+  width: 125px;
+  height: 125px;
   border-radius: 100px;
 }
 
@@ -51,7 +73,7 @@ body {
 
 #menu ul {
   font-size: 20px;
-  position: absolute;
+  position: fixed;
   top: 15%; /* posiciona na metade da tela */
   margin-top: -25px; /* e retrocede metade da altura */
   left: 70%; /* posiciona na metade da tela */
@@ -69,12 +91,12 @@ body {
   /* visual do link */
   color: #333;
   text-decoration: none;
-  border-bottom:3px solid #EDEDED;
+  border-bottom:3px solid rgb(200, 200, 200);
 }
 
 #menu ul li a:hover {
   color: #6D6D6D;
-  border-bottom:3px solid #EA0000;
+  border-bottom:3px solid rgb(110, 110, 110);
 }
 
 
