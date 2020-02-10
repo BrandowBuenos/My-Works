@@ -5,19 +5,20 @@
 }
 
 body {
-  background-color:#FFFF;
+  background-color:rgba(255,255,255);
   font-family: 'Helvetica Neue Thin', sans-serif;
   font-size: 20px;
+  overflow-y: hidden;
   
 }
 
 .background {
   position: absolute;
-  width: 300px;
-  top: 45%; /* posiciona na metade da tela */
-  margin-top: -25px; /* e retrocede metade da altura */
-  left: 47%; /* posiciona na metade da tela */
-  margin-left: -100px;
+  background-repeat: repeat-x;
+  background-attachment: fixed;
+  width: 100%;        
+  top: 0%; 
+  margin-top: -25px; 
 }
 
 .nav {
@@ -87,8 +88,8 @@ body {
   display: inline-block;
   cursor: pointer;
   pointer-events: none;
-  position: absolute;
-  bottom: 0px;
+  position: fixed;
+  bottom: 0;
 
 }
 .footer:hover {
