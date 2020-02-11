@@ -44,7 +44,7 @@ body {
 }
 
 .nav {
-  position: absolute;
+  position: fixed;
   top: 15%; /* posiciona na metade da tela */
   margin-top: -25px; /* e retrocede metade da altura */
   left: 20%; /* posiciona na metade da tela */
@@ -52,7 +52,7 @@ body {
 }
 
 .profilepicture{
-  position: absolute;
+  position: fixed;
   top: 10%; /* posiciona na metade da tela */
   margin-top: -25px; /* e retrocede metade da altura */
   left: 10%; /* posiciona na metade da tela */
