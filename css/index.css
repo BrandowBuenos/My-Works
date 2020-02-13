@@ -26,9 +26,15 @@ body {
   background-repeat: repeat-x;
   background-attachment: fixed;
   width: 2.5%;        
-  top: 50%; 
-  margin-top: -25px; 
-  margin-left: 50%;
+  top: 42%; 
+ left: 48%;
+}
+
+.swipe {
+  color: #000000;
+  position: fixed;
+  top: 48%;  
+  left: 45%;
 }
 
 .nav {
