@@ -1,3 +1,8 @@
+@font-face {
+  font-family: helveticaneue;
+  src: url(fonts/helveticaneue/HelveticaNeueThin.ttf);
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -6,7 +11,7 @@
 
 body {
   background-color:rgba(255,255,255);
-  font-family: 'Helvetica Neue Thin', sans-serif;
+  font-family: helveticaneue, sans-serif;
   font-size: 20px;
   overflow-y: hidden;
   
