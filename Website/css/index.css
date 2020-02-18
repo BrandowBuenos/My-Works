@@ -28,7 +28,7 @@ body {
 }
 
 .arrow {
-  position: fixed;
+  position: absolute;
   background-repeat: repeat-x;
   background-attachment: fixed;
   width: 2.5%;        
@@ -38,9 +38,17 @@ body {
 
 .swipe {
   color: #000000;
-  position: fixed;
+  position: absolute;
   top: 48%;  
   left: 45%;
+}
+
+.phrase {
+  color: #000000;
+  position: fixed;
+  font-size: 25px;
+  top: 48%;  
+  left: 43%;
 }
 
 .nav {
