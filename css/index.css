@@ -1,13 +1,9 @@
-/* @font-face {
-  font-family: helveticaneue;
-  src: url(fonts/helveticaneue/HelveticaNeueThin.ttf);
-}
-*/
+@import url('https://fonts.googleapis.com/css?family=Roboto:300');
+
 
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
 body {
@@ -75,10 +71,6 @@ body {
     border-radius: 100px;
 }
 
-.icons {
-    margin-bottom: -4px;
-}
-
 #menu img {
     margin-bottom: -4px;
 }
@@ -113,6 +105,12 @@ body {
 #menu ul li a:hover {
     color: #6D6D6D;
     border-bottom: 3px solid rgb(110, 110, 110);
+}
+
+/* Footer */
+
+.icons {
+    margin-bottom: -2px;
 }
 
 .footer {
@@ -163,10 +161,11 @@ body {
     position: relative;
     display: inline-block;
     margin-right: 30px;
-    top: 10px;
+    top: 20px;
     opacity: 0;
     transition: opacity 0.5s ease, top 0.5s ease;
     transition-delay: 0;
+    
 }
 
 span {
@@ -266,3 +265,67 @@ span {
 .footer:hover .item:nth-child(10) {
     transition-delay: 0.7s;
 }
+
+/* Phrase */
+
+.phrase {
+    position: fixed;
+    top: 48%;
+    left: 40%;
+    float: center;
+    width: 18%;
+    text-align:center;
+    font-family:'Roboto';
+    font-weight:300;
+    font-size:32px;
+    color:#555;
+}
+
+div.firstphrase, div.secondphrase {
+    display:inline-block;
+    overflow:hidden;
+    white-space:nowrap;
+  }
+  
+  div.firstphrase, div.secondphrase:first-of-type {  
+    animation: showup 7s infinite;
+  }
+  
+  div.secondphrase:last-of-type {
+    width:0px;
+    animation: reveal 7s infinite;
+  }
+  
+  div.secondphrase:last-of-type span {
+    margin-left:-395px;
+    animation: slidein 7s infinite;
+  }
+  
+  @keyframes showup {
+      0% {opacity:0;}
+      20% {opacity:1;}
+      80% {opacity:1;}
+      100% {opacity:0;}
+  }
+  
+  @keyframes slidein {
+      0% { margin-left:-800px; }
+      20% { margin-left:-800px; }
+      35% { margin-left:0px; }
+      100% { margin-left:0px; }
+  }
+  
+  @keyframes reveal {
+      0% {opacity:0;width:0px;}
+      20% {opacity:1;width:0px;}
+      30% {width:110px;}
+      80% {opacity:1;}
+      100% {opacity:0;width:110px;}
+  }
+  
+  
+  p {
+    font-size:12px;
+    color:#999;
+    margin-top:200px;
+  }
