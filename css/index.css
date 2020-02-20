@@ -46,17 +46,6 @@ body {
     left: 43%;
 }
 
-.nav {
-    position: fixed;
-    top: 15%;
-    /* posiciona na metade da tela */
-    margin-top: -25px;
-    /* e retrocede metade da altura */
-    left: 20%;
-    /* posiciona na metade da tela */
-    margin-left: -100px;
-}
-
 .profilepicture {
     position: fixed;
     top: 10%;
@@ -69,6 +58,19 @@ body {
     width: 125px;
     height: 125px;
     border-radius: 100px;
+}
+
+/* Menu */
+
+.nav {
+    position: fixed;
+    top: 15%;
+    /* posiciona na metade da tela */
+    margin-top: -25px;
+    /* e retrocede metade da altura */
+    left: 20%;
+    /* posiciona na metade da tela */
+    margin-left: -100px;
 }
 
 #menu img {
