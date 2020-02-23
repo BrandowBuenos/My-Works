@@ -277,9 +277,8 @@ span {
     float: center;
     width: 18%;
     text-align:center;
-    font-family:'Roboto';
-    font-weight:300;
-    font-size:32px;
+    font-family:'Helvetica Neue Thin';
+    font-size:30px;
     color:#555;
 }
 
@@ -292,17 +291,16 @@ div.firstphrase, div.secondphrase {
   div.firstphrase, div.secondphrase:first-of-type {  
     animation: showup 7s infinite;
   }
+
+  .secondphrase {
+      margin-left: -8px;
+  }
   
   div.secondphrase:last-of-type {
     width:0px;
     animation: reveal 7s infinite;
   }
-  
-  div.secondphrase:last-of-type span {
-    margin-left:-395px;
-    animation: slidein 7s infinite;
-  }
-  
+    
   @keyframes showup {
       0% {opacity:0;}
       20% {opacity:1;}
@@ -320,9 +318,9 @@ div.firstphrase, div.secondphrase {
   @keyframes reveal {
       0% {opacity:0;width:0px;}
       20% {opacity:1;width:0px;}
-      30% {width:110px;}
+      30% {width:100px;}
       80% {opacity:1;}
-      100% {opacity:0;width:110px;}
+      100% {opacity:0;width:100px;}
   }
   
   
