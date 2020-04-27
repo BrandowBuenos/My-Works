@@ -62,11 +62,11 @@ export default function Main() {
         <div className="spacer"></div>
         <div className="item">
           <img className="icons" src={GithubIcon} alt="" />
-          <span> Github</span>
+          <span>Github</span>
         </div>
         <div className="item">
           <img className="icons" src={LinkedinIcon} alt="" />
-          <span> Linkedin</span>
+          <span>Linkedin</span>
         </div>
         <div className="item">
           <img className="icons" src={InstagramIcon} alt="" />
@@ -74,7 +74,7 @@ export default function Main() {
         </div>
         <div className="item">
           <img className="icons" src={FacebookIcon} alt="" />
-          <span> Facebook</span>
+          <span>Facebook</span>
         </div>
       </footer>
 
