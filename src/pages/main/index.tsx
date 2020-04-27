@@ -68,14 +68,6 @@ export default function Main() {
           <img className="icons" src={LinkedinIcon} alt="" />
           <span>Linkedin</span>
         </div>
-        <div className="item">
-          <img className="icons" src={InstagramIcon} alt="" />
-          <span>Instagram</span>
-        </div>
-        <div className="item">
-          <img className="icons" src={FacebookIcon} alt="" />
-          <span>Facebook</span>
-        </div>
       </footer>
 
     </body>
