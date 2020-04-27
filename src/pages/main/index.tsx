@@ -56,7 +56,6 @@ export default function Main() {
           <div className="secondphrase">, create.</div>
         </div>
       </div>
-
       <footer className="footer slideUp">
         <div className="label">Follow Me</div>
         <div className="spacer"></div>
@@ -69,7 +68,6 @@ export default function Main() {
           <span>Linkedin</span>
         </div>
       </footer>
-
     </body>
 
 
