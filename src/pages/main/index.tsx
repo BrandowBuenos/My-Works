@@ -26,7 +26,6 @@ export default function Main() {
           Graduating in Software Engineering at Federal University of Pampa
         </h4>
       </div>
-
       <nav id="menu">
         <ul>
           <li>
