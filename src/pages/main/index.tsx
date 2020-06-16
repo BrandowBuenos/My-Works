@@ -1,75 +1,93 @@
-import React from "react";
+import React from 'react';
+import styled from 'styled-components';
+import { Grid } from '@material-ui/core';
 
-import "./styles.css";
-import "../styles/flexbox.css";
-import "../styles/wickedcss.min.css";
+import { FaGithub, FaLinkedin } from 'react-icons/fa';
 
-import Background from "../../assets/img/png/teste.png";
-import ProfilePicture from "../../assets/img/png/profile-picture.jpg";
-import AboutIcon from "../../assets/img/png/about-icon.png";
-import ProjectIcon from "../../assets/img/png/project-icon.png";
-import PlaneIcon from "../../assets/img/png/plane-icon.png";
-
-import GithubIcon from "../../assets/img/png/github-icon.png";
-import InstagramIcon from "../../assets/img/png/instagram-icon.png";
-import FacebookIcon from "../../assets/img/png/facebook-icon.png";
-import LinkedinIcon from "../../assets/img/png/linkedin-icon.png";
+import Background from "../../assets/img/png/background.png";
 
 export default function Main() {
+
+  const Container = styled(Grid)`
+    background-color: #F1F1F1;
+    background-image: url(${Background});
+    background-size: cover;
+    background-repeat: no-repeat;
+    height:100vh;
+    font-size: larger;
+  `;
+
+  const Card = styled(Grid)`
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  `;
+
+  const ProfilePictureContent = styled(Grid)`
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 20vh;
+
+    img {
+      border-radius:50%;
+      width:15vh;
+    }
+  `;
+
+  const UserDescription = styled(Grid)`
+    display: flex;
+    align-items: flex-start;
+    height: 10vh;
+  `;
+
+  const SocialNetworks = styled(Grid)`
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height:10vh;
+  `;
+
+  const Networks = styled(Grid)`
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  `;
+
+  const Link = styled.a`
+    text-decoration: none;
+    color: #333;
+    font-size:20vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  `;
+
+
   return (
-    <body>
-      <img className="background" alt="" src={Background} />
-      <img className="profilepicture slideDown" alt="" src={ProfilePicture} />
-      <div className="title fadeIn">
-        <i>Brandow Buenos Aires Madeira</i> <br />
-        <h4>
-          Graduating in Software Engineering at Federal University of Pampa
-        </h4>
-      </div>
-      <nav id="menu">
-        <ul>
-          <li>
-            <a href="#">
-              <img src={ProjectIcon} alt="" />
-              &nbsp;&nbsp;About
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <img src={AboutIcon} alt="" />
-              &nbsp;&nbsp;Projects
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <img src={PlaneIcon} alt="" />
-              &nbsp;&nbsp;Contact
-            </a>
-          </li>
-        </ul>
-      </nav>
+    <>
+      <Container item xs={12} sm={12} md={12} lg={12}>
+        <Card container item xs={12} sm={12} md={12} lg={12}>
+          <ProfilePictureContent item xs={11} sm={2} md={2} lg={2}>
+            <img src='https://avatars3.githubusercontent.com/u/52222495?s=400&u=bc8eea80b72ed91315f15410654712b8ad20285a&v=4' alt="" />
+          </ProfilePictureContent>
+          <UserDescription container item xs={11} sm={6} md={4} lg={4}>
+            <div>
+              <i>Brandow Buenos Aires Madeira</i><br />
+              <h4>
+                Graduating in Software Engineering at Federal University of Pampa
+               </h4>
+            </div>
+          </UserDescription>
 
-      <div id="content">
-        <div className="phrase">
-          <div className="firstphrase">Nevertheless</div>
-          <div className="secondphrase">, create.</div>
-        </div>
-      </div>
-      <footer className="footer slideUp">
-        <div className="label">Follow Me</div>
-        <div className="spacer"></div>
-        <div className="item">
-          <img className="icons" src={GithubIcon} alt="" />
-          <span>Github</span>
-        </div>
-        <div className="item">
-          <img className="icons" src={LinkedinIcon} alt="" />
-          <span>Linkedin</span>
-        </div>
-      </footer>
-    </body>
-
-
+          <SocialNetworks container item xs={11} sm={11} md={11} lg={4}>
+            <Link href="https://github.com/BrandowBuenos"><Networks item xs={2} sm={2} md={2} lg={2}><FaGithub /></Networks></Link>
+            <Link href="https://www.linkedin.com/in/brandowbuenos/"><Networks item xs={2} sm={2} md={2} lg={2}><FaLinkedin /></Networks></Link>
+          </SocialNetworks>
+        </Card>
+      </Container>
+    </>
   );
 }
 
