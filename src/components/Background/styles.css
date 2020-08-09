@@ -1,0 +1,189 @@
+.background {
+  position: fixed;
+}
+
+@media screen and (max-width: 1280px) {
+  .background {position: relative;}
+}
+
+.cls-1 {
+  isolation: isolate;
+}
+.cls-2 {
+  fill: #ccc;
+}
+.cls-3,
+.cls-5 {
+  opacity: 0.59;
+}
+.cls-4,
+.cls-5 {
+  fill: #fefefe;
+}
+.cls-6 {
+  fill: #00796b;
+}
+.cls-7 {
+  fill: #26a69a;
+}
+.cls-8 {
+  fill: #e0e0e0;
+}
+.cls-9 {
+  fill: #fafafa;
+}
+.cls-10 {
+  fill: #00897b;
+}
+.cls-11 {
+  fill: #80cbc4;
+}
+.cls-12 {
+  fill: #00695c;
+}
+.cls-13 {
+  opacity: 0.35;
+  mix-blend-mode: multiply;
+}
+.cls-14 {
+  fill: #e57373;
+}
+.cls-15 {
+  fill: #fff;
+}
+.cls-16 {
+  fill: #7cb342;
+}
+.cls-17 {
+  fill: #689f38;
+}
+.cls-18 {
+  fill: #8d6e63;
+}
+.cls-19 {
+  fill: #6d4c41;
+}
+.cls-20 {
+  fill: #ccc;
+}
+.cls-21 {
+  fill: #e53935;
+}
+.cls-22 {
+  fill: #ef5350;
+}
+.cls-23 {
+  opacity: 0.25;
+}
+.cls-24 {
+  fill: #80deea;
+}
+.cls-25 {
+  fill: #4dd0e1;
+}
+.cls-26 {
+  fill: #26c6da;
+}
+
+svg .cls-21,
+svg .cls-20,
+svg .cls-19,
+svg .cls-22,
+svg .cls-14,
+svg .cls-23 {
+  animation-name: ship-move, ship-move1;
+  animation-duration: 6s, 15s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes ship-move {
+  0% {
+    transform: translate(0px);
+  }
+  50% {
+    transform: translate(6px);
+  }
+}
+
+@keyframes ship-move1 {
+  0% {
+    transform: rotate(2deg);
+  }
+  50% {
+    transform: rotate(-0.5deg);
+  }
+  100% {
+    transform: rotate(2deg);
+  }
+}
+
+svg .cls-4:first-child,
+svg .cls-5 {
+  animation-name: back-cloud-move;
+  animation-duration: 100s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  transform: translate(240px);
+}
+
+@keyframes back-cloud-move {
+  0% {
+    transform: translate(240px);
+  }
+  100% {
+    transform: translate(-240px);
+  }
+}
+
+svg .cls-4:not(:first-child),
+svg .cls-13 {
+  animation-name: cloud-move;
+  animation-duration: 70s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  transform: translate(-240px);
+}
+
+@keyframes cloud-move {
+  0% {
+    transform: translate(-240px);
+  }
+  100% {
+    transform: translate(240px);
+  }
+}
+
+svg .cls-24 {
+  animation-name: wave1-move;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  transform: translateY(1px);
+}
+
+@keyframes wave1-move {
+  0% {
+    transform: translateY(1px);
+  }
+  50% {
+    transform: translateY(-1px);
+  }
+}
+
+svg .cls-25 {
+  animation-name: wave2-move;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  transform: translateY(0px);
+}
+
+@keyframes wave2-move {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(1px);
+  }
+}
