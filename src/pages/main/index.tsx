@@ -230,7 +230,7 @@ const Skills = styled(Grid)`
                   <article>
                     <h1 style={{ color: "rgb(27,31,34)" }}>Github</h1>
                     <p>Code Jobs</p>
-                    <span><FaGithub /></span>
+                    <span><FaGithub size={'1.5em'}/></span>
                   </article>
                 </a>
               </div>
@@ -239,7 +239,7 @@ const Skills = styled(Grid)`
                   <article>
                     <h1 style={{ color: "rgb(12,98,166)" }}>Linkedin</h1>
                     <p>Business profile</p>
-                    <span><FaLinkedin /></span>
+                    <span><FaLinkedin size={'1.5em'}/></span>
                   </article>
                 </a>
               </div>
@@ -248,7 +248,7 @@ const Skills = styled(Grid)`
                   <article>
                     <h1 style={{ color: "#ea4c89" }}>Dribbble</h1>
                     <p>UI/UX Projects</p>
-                    <span><FaDribbble /></span>
+                    <span><FaDribbble size={'1.5em'} /></span>
                   </article>
                 </a>
               </div>
@@ -257,7 +257,7 @@ const Skills = styled(Grid)`
                   <article>
                     <h1 style={{ color: "#2b2b2b" }}>Behance</h1>
                     <p>UI/UX Projects</p>
-                    <span><FaBehance /></span>
+                    <span><FaBehance size={'1.5em'}/></span>
                   </article>
                 </a>
               </div>
