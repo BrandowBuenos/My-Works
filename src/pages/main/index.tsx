@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { Grid, Avatar, Typography } from '@material-ui/core';
 
-import { FaGithub, FaLinkedin, FaDribbble, FaBehance } from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaDribbble, FaBehance, FaJava, FaReact, FaHtml5, FaCss3, FaNodeJs, FaGit, FaUikit } from 'react-icons/fa';
 
 import Background from "../../components/Background";
 
@@ -65,11 +65,25 @@ export default function Main() {
   height: 25%;
 `
 
-const Skills = styled(Grid)`
+  const Skills = styled(Grid)`
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
   height: 35%;
+  
+  .cards {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    i {
+      color: #909090;
+      display: flex;
+      padding-right: 1em;
+      vertical-align: middle;
+    }
+  }
+
 `
   const Main = styled(Grid)`
   display: flex;
@@ -204,21 +218,19 @@ const Skills = styled(Grid)`
           </About>
 
           <Skills container item xs={11} sm={11} md={11} lg={11}>
-            <div>
+            <Grid container item xs={12} sm={12} md={12} lg={12}>
               <Typography variant="overline" display="block" gutterBottom>
-                Skills
+              Skills
               </Typography>
-              <Typography variant="body1" gutterBottom>
-                <p>UI / UX</p>
-                <p>Design</p>
-                <p>Java</p>
-                <p>Javascript (ReactJS)</p>
-                <p>HTML</p>
-                <p>CSS</p>
-                <p>Git</p>
-                <p>CSS</p>
-              </Typography>
-              </div>
+            </Grid>
+
+            <Grid className="cards" container item xs={6} sm={4} md={4} lg={4}><i><FaUikit size={'1em'} /></i><span>UI/UX</span></Grid>
+            <Grid className="cards" container item xs={6} sm={4} md={4} lg={4}><i><FaJava size={'1em'} /></i><span>Java</span></Grid>
+            <Grid className="cards" container item xs={6} sm={4} md={4} lg={4}><i><FaReact size={'1em'} /></i><span>ReactJS</span></Grid>
+            <Grid className="cards" container item xs={6} sm={4} md={4} lg={4}><i><FaNodeJs size={'1em'} /></i><span>NodeJS</span></Grid>
+            <Grid className="cards" container item xs={6} sm={4} md={4} lg={4}><i><FaHtml5 size={'1em'} /></i><span>HTML</span></Grid>
+            <Grid className="cards" container item xs={6} sm={4} md={4} lg={4}><i><FaCss3 size={'1em'} /></i><span>CSS</span></Grid>
+            <Grid className="cards" container item xs={6} sm={4} md={4} lg={4}><i><FaGit size={'1em'} /></i><span>Git</span></Grid>
           </Skills>
         </UserDetails>
 
@@ -230,7 +242,7 @@ const Skills = styled(Grid)`
                   <article>
                     <h1 style={{ color: "rgb(27,31,34)" }}>Github</h1>
                     <p>Code Jobs</p>
-                    <span><FaGithub size={'1.5em'}/></span>
+                    <span><FaGithub size={'1.5em'} /></span>
                   </article>
                 </a>
               </div>
@@ -239,7 +251,7 @@ const Skills = styled(Grid)`
                   <article>
                     <h1 style={{ color: "rgb(12,98,166)" }}>Linkedin</h1>
                     <p>Business profile</p>
-                    <span><FaLinkedin size={'1.5em'}/></span>
+                    <span><FaLinkedin size={'1.5em'} /></span>
                   </article>
                 </a>
               </div>
@@ -257,7 +269,7 @@ const Skills = styled(Grid)`
                   <article>
                     <h1 style={{ color: "#2b2b2b" }}>Behance</h1>
                     <p>UI/UX Projects</p>
-                    <span><FaBehance size={'1.5em'}/></span>
+                    <span><FaBehance size={'1.5em'} /></span>
                   </article>
                 </a>
               </div>
