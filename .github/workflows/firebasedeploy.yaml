@@ -1,0 +1,56 @@
+name: Build and Continuous Delivery
+
+on:
+  push:
+    branches: [master]
+
+jobs:
+  build:
+    name: Build React Project
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      
+      - name: Use Node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: '12.x'
+      
+      - name: Install dependencies
+        run: yarn --frozen-lockfile
+
+      - name: Build
+        run: yarn build
+
+      - name: Archive Production Artifact
+        uses: actions/upload-artifact@master
+        with:
+          name: temp
+          path: temp
+
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Download Artifact
+        uses: actions/download-artifact@master
+        with:
+          name: temp
+          path: temp
+      
+      - name: Use Node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: '12.x'
+      
+      - name: Install dependencies
+        run: yarn --frozen-lockfile
+
+      - name: Deploy to Firebase
+        run: yarn firebase deploy --only hosting --token "$FIREBASE_TOKEN"
+
+    env:
+      FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
