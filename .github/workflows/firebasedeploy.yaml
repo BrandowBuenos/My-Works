@@ -30,6 +30,8 @@ jobs:
           path: temp
 
   deploy:
+    name: Deploy
+    needs: build
     runs-on: ubuntu-latest
 
     steps:
