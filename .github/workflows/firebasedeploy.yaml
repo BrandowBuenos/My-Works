@@ -26,8 +26,7 @@ jobs:
       - name: Archive Production Artifact
         uses: actions/upload-artifact@master
         with:
-          name: temp
-          path: temp
+          path: build
 
   deploy:
     name: Deploy
@@ -40,8 +39,7 @@ jobs:
       - name: Download Artifact
         uses: actions/download-artifact@master
         with:
-          name: temp
-          path: temp
+          path: build
       
       - name: Use Node.js
         uses: actions/setup-node@v1
