@@ -1,4 +1,4 @@
-name: Build and Continuous Delivery
+name: Continuous Delivery
 
 on:
   push:
@@ -6,7 +6,7 @@ on:
 
 jobs:
   build:
-    name: Build React Project
+    name: Deploy React Project
     runs-on: ubuntu-latest
 
     steps:
@@ -22,32 +22,6 @@ jobs:
 
       - name: Build
         run: yarn build
-
-      - name: Archive Production Artifact
-        uses: actions/upload-artifact@master
-        with:
-          path: build
-
-  deploy:
-    name: Deploy
-    needs: build
-    runs-on: ubuntu-latest
-
-    steps:
-      - uses: actions/checkout@v2
-
-      - name: Download Artifact
-        uses: actions/download-artifact@master
-        with:
-          path: build
-      
-      - name: Use Node.js
-        uses: actions/setup-node@v1
-        with:
-          node-version: '12.x'
-      
-      - name: Install dependencies
-        run: yarn --frozen-lockfile
 
       - name: Deploy to Firebase
         run: yarn firebase deploy --only hosting --token "$FIREBASE_TOKEN" --project "$PROJECT_ID"
